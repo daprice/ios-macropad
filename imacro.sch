@@ -460,9 +460,9 @@ Text Label 3075 3775 0    60   ~ 0
 ROW3
 Text Label 3075 3925 0    60   ~ 0
 COL0
-Text Label 1675 4175 2    60   ~ 0
-COL1
 Text Label 1675 4325 2    60   ~ 0
+COL1
+Text Label 1675 4175 2    60   ~ 0
 COL2
 $Comp
 L Solar_Cell QI1
@@ -470,7 +470,7 @@ U 1 1 5A8ED49D
 P 2275 1050
 F 0 "QI1" H 2375 1150 50  0000 L CNN
 F 1 "QI_Receiver" H 2375 1050 50  0000 L CNN
-F 2 "Wire_Pads:SolderWirePad_2x_2-5mmDrill" V 2275 1110 50  0001 C CNN
+F 2 "imacro:QI_connector" V 2275 1110 50  0001 C CNN
 F 3 "" V 2275 1110 50  0001 C CNN
 	1    2275 1050
 	1    0    0    -1  
