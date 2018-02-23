@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/daleprice/Documents/Keyboards/ios_macropad/imacro.sch)
-    (date "Fri 23 Feb 2018 01:25:10 AM CST")
+    (date "Fri 23 Feb 2018 04:10:29 AM CST")
     (tool "Eeschema 4.0.7-e2-6376~58~ubuntu16.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -179,6 +179,7 @@
       (tstamp 5A8ED7C3))
     (comp (ref SW1)
       (value TOGGLE)
+      (footprint imacro:GPTS_SPST_Pushbutton)
       (libsource (lib switches) (part SW_SPST))
       (sheetpath (names /) (tstamps /))
       (tstamp 5A8F3068)))
