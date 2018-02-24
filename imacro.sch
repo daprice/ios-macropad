@@ -456,7 +456,7 @@ Text Label 3075 3475 0    60   ~ 0
 ROW1
 Text Label 3075 3625 0    60   ~ 0
 ROW2
-Text Label 3075 3775 0    60   ~ 0
+Text Label 1675 3575 2    60   ~ 0
 ROW3
 Text Label 3075 3925 0    60   ~ 0
 COL0
