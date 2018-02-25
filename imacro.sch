@@ -460,9 +460,9 @@ Text Label 1675 3575 2    60   ~ 0
 ROW3
 Text Label 3075 3925 0    60   ~ 0
 COL0
-Text Label 1675 4325 2    60   ~ 0
-COL1
 Text Label 1675 4175 2    60   ~ 0
+COL1
+Text Label 1675 4325 2    60   ~ 0
 COL2
 $Comp
 L Solar_Cell QI1
