@@ -1,0 +1,22 @@
+Quantity,Component,Mfg Part #,Description,URL,Unit price as of 2/23/18,Total price
+1,N/A,1570,LiPo 3.7v 100mAh,https://www.adafruit.com/product/1570 or https://www.digikey.com/product-detail/en/adafruit-industries-llc/1570/1528-1837-ND/5054546,$5.95,$5.95
+1,U1,2829,Feather 32u4 Bluefruit LE (loose headers),https://www.adafruit.com/product/2829 or https://www.digikey.com/product-detail/en/adafruit-industries-llc/2829/1528-1517-ND/5774320,$29.95,$29.95
+1,QI1,1901,QI wireless power receiver,https://www.adafruit.com/product/1901,$14.95,$14.95
+12,SW(Row):(Col),PG1350,"Kailh choc keyswitch, any color",https://novelkeys.xyz/collections/switches/products/kailh-low-profile-switches,$0.35,$4.20
+12,D(Row):(Col),1N4148,SOD-123 package,https://www.digikey.com/scripts/DkSearch/dksus.dll?Detail&itemSeq=252997464&uq=636550406655446122,$0.11,$1.36
+1,D1,MBR120,"Schottky diode, SOD-123F",https://www.digikey.com/scripts/DkSearch/dksus.dll?Detail&itemSeq=252997545&uq=636550409386409981,$0.42,$0.42
+1,SW1,GPTS203211B,SPST On/off pushbutton,https://www.digikey.com/product-detail/en/cw-industries/GPTS203211B/CW181-ND/3190590,$0.74,$0.74
+,Total,,,,,$57.57
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
