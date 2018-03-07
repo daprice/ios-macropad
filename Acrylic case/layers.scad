@@ -18,8 +18,8 @@ nut_long_size = 6.2;
 
 // MAGIC DESIGN NUMBERS
 
-case_dia = nut_long_size; // the rounded corner diameter of the case
-case_bezel = [1, case_dia + 0.5]; // x and y bezel sizes
+case_r = nut_long_size/2; // the rounded corner radius of the case
+case_bezel = [1, case_r + 0.5]; // x and y bezel sizes
 
 // DERIVED VALUES
 
@@ -34,13 +34,13 @@ module layer_2d(layer = 0) {
 	
 	difference() {
 		//basic layer shape
-		roundrect([case_size[0], case_size[1]], r = case_dia, $fn = 50);
+		roundrect([case_size[0], case_size[1]], r = case_r, $fn = 50);
 		
 		// bolt holes that should be in all layers
-		translate([case_dia, case_dia]) circle(dia = screw_size + screw_tol, center = true, $fn = 20);
-		translate([case_size[0] - case_dia, case_dia]) circle(dia = screw_size + screw_tol, center = true, $fn = 20);
-		translate([case_dia, case_size[1] - case_dia]) circle(dia = screw_size + screw_tol, center = true, $fn = 20);
-		translate([case_size[0] - case_dia, case_size[1] - case_dia]) circle(dia = screw_size + screw_tol, center = true, $fn = 20);
+		translate([case_r, case_r]) circle(d = screw_size + screw_tol, center = true, $fn = 20);
+		translate([case_size[0] - case_r, case_r]) circle(d = screw_size + screw_tol, center = true, $fn = 20);
+		translate([case_r, case_size[1] - case_r]) circle(d = screw_size + screw_tol, center = true, $fn = 20);
+		translate([case_size[0] - case_r, case_size[1] - case_r]) circle(d = screw_size + screw_tol, center = true, $fn = 20);
 		
 		if(layer == 0) {
 			// TODO: on/off button hole
