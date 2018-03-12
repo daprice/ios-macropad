@@ -1,4 +1,4 @@
-# The Missing Macropad
+# Airpad
 A tiny (3x4 key) bluetooth keypad using low profile mechanical keyboard switches and the Adafruit Feather 32u4 Bluefruit, intended to give you quick access to functions on your iOS device that are normally cumbersome to use. Or a companion to a 60% or smaller keyboard. Your choice.
 
 ## PCB
