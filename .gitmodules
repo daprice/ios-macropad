@@ -1,0 +1,3 @@
+[submodule "Acrylic case/lib/keyboard_parts"]
+	path = Acrylic case/lib/keyboard_parts
+	url = https://github.com/daprice/keyboard_parts.git

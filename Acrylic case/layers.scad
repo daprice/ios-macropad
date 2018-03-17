@@ -1,10 +1,17 @@
 include <MCAD/units.scad>;
+use <lib/keyboard_parts/layout.scad>;
+use <lib/keyboard_parts/parts.scad>;
+include <lib/keyboard_parts/switch_colors.scad>;
+include <layout.scad>;
 
 // CONFIGURATION
 
-layer_thicknesses = [1.5, 5.6, 3, 3, 3, 3]; // vector of layer thickness values from bottom layer to top
+layer_thicknesses = [1/16*inch, 1/4*inch, 1/8*inch, 1/8*inch, 1/8*inch, 1/8*inch]; // vector of layer thickness values from bottom layer to top
 
 max_layer_size = [60, 100]; // maximum x and y size of layers, just used for visualization and spacing of layers in the vector export
+
+$fa = 6;
+$fs=0.1;
 
 // PART SIZES
 
@@ -19,7 +26,7 @@ nut_long_size = 6.2;
 // MAGIC DESIGN NUMBERS
 
 case_r = nut_long_size/2; // the rounded corner radius of the case
-case_bezel = [1, case_r + 0.5]; // x and y bezel sizes
+case_bezel = [2, screw_head_dia]; // x and y bezel sizes
 
 // DERIVED VALUES
 
@@ -34,13 +41,13 @@ module layer_2d(layer = 0) {
 	
 	difference() {
 		//basic layer shape
-		roundrect([case_size[0], case_size[1]], r = case_r, $fn = 50);
+		roundrect([case_size[0], case_size[1]], r = case_r);
 		
 		// bolt holes that should be in all layers
-		translate([case_r, case_r]) circle(d = screw_size + screw_tol, center = true, $fn = 20);
-		translate([case_size[0] - case_r, case_r]) circle(d = screw_size + screw_tol, center = true, $fn = 20);
-		translate([case_r, case_size[1] - case_r]) circle(d = screw_size + screw_tol, center = true, $fn = 20);
-		translate([case_size[0] - case_r, case_size[1] - case_r]) circle(d = screw_size + screw_tol, center = true, $fn = 20);
+		translate([case_r, case_r]) circle(d = screw_size + screw_tol, center = true);
+		translate([case_size[0] - case_r, case_r]) circle(d = screw_size + screw_tol, center = true);
+		translate([case_r, case_size[1] - case_r]) circle(d = screw_size + screw_tol, center = true);
+		translate([case_size[0] - case_r, case_size[1] - case_r]) circle(d = screw_size + screw_tol, center = true);
 		
 		if(layer == 0) {
 			// TODO: on/off button hole
@@ -62,11 +69,13 @@ module layer_2d(layer = 0) {
 		}
 		
 		else if (layer == 4) {
-			// TODO: switch plate
+			// switch plate
+			translate([case_size[0]/2, case_size[1]/2, 0]) layout("PG1350", key_layout, col_offsets, center = true, plateCutouts = true);
 		}
 		
 		else if (layer == 5) {
-			// TODO: high profile bezels
+			// high profile bezels
+			translate([case_size[0]/2, case_size[1]/2, 0]) layout_outline(0.5, key_layout, col_offsets, center=true);
 		}
 		
 		else {
@@ -77,9 +86,43 @@ module layer_2d(layer = 0) {
 }
 
 // renders a layer in 3d
-module layer_3d(layer = 0) {
-	linear_extrude(height = layer_thicknesses[layer]) {
+module layer_3d(layer = 0, color) {
+	color(color) linear_extrude(height = layer_thicknesses[layer]) {
 		layer_2d(layer);
+	}
+	
+	// add anything that can be shown along with the 3d rendering but won't necessarily be part of the case here, like switches, pcb, etc
+	
+	if(layer == 0) {
+		
+	}
+	
+	else if (layer == 1) {
+		
+	}
+	
+	else if (layer == 2) {
+		
+	}
+	
+	else if (layer == 3) {
+		
+	}
+	
+	else if (layer == 4) {
+		// preview switches
+		%translate([case_size[0]/2, case_size[1]/2, layer_thicknesses[layer]])
+		layout("PG1350", key_layout, col_offsets, center = true) {
+			switch("PG1350");
+		}
+	}
+	
+	else if (layer == 5) {
+		// TODO: high profile bezels
+	}
+	
+	else {
+		square([1,1]); // placeholder
 	}
 }
 
