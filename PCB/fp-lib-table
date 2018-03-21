@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name imacro)(type KiCad)(uri "$(KIPRJMOD)/imacro.pretty")(options "")(descr ""))
+  (lib (name keyswitches)(type KiCad)(uri /Users/daleprice/Development/Keyboards/keyswitches.pretty)(options "")(descr ""))
 )
