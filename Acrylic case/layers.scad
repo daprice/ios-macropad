@@ -26,7 +26,7 @@ nut_long_size = 6.2;
 // MAGIC DESIGN NUMBERS
 
 case_r = nut_long_size/2; // the rounded corner radius of the case
-case_bezel = [2, screw_head_dia]; // x and y bezel sizes
+case_bezel = [4, screw_head_dia]; // x and y bezel sizes
 
 // DERIVED VALUES
 
