@@ -35,14 +35,14 @@ module layout_layers(layer = 0, extraSpace = display_spacing, 3d = false) {
 	}
 }
 
-module stack_layers(layer = 0, extraSpace = 0, alpha = 1) {
+module stack_layers(layer = 0, maxLayer = -1, extraSpace = 0, alpha = 1) {
 	value = (layer)/len(layer_thicknesses)/3 + 0.4;
 	
 	layer_3d(layer, color = [value, value, value, alpha]);
 	
-	if(layer + 1 < layer_count) {
+	if(layer + 1 < layer_count && (maxLayer == -1 || layer < maxLayer)) {
 		translate([0, 0, layer_thicknesses[layer] + extraSpace]) {
-			stack_layers(layer = layer + 1, extraSpace = extraSpace, alpha = alpha);
+			stack_layers(layer = layer + 1, maxLayer = maxLayer, extraSpace = extraSpace, alpha = alpha);
 		}
 	}
 }
