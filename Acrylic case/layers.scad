@@ -50,22 +50,29 @@ module layer_2d(layer = 0) {
 		translate([case_size[0] - case_r, case_size[1] - case_r]) circle(d = screw_size + screw_tol, center = true);
 		
 		if(layer == 0) {
-			// TODO: on/off button hole
+			// on/off button hole
+			translate([case_size[0]/2 - pcb_size[0]/2 + 6.56, case_size[1]/2 + (pcb_size[1]-2.38125)/2 - 68.73125, 0]) circle(d = 7, center = true);
 			
-			
-			// TODO: led holes
+			// TODO: led holes?
 		}
 		
 		else if (layer == 1) {
 			// TODO: space for button, feather, battery, qi module
+			
+			// space under PCB (so Feather and bottom components can fit)
+			translate([case_size[0]/2, case_size[1]/2, 0]) pcb_for(key_layout, col_offsets, [2.38125 + 0.5, -2, -1, 0], center = true, centerOnLayout = true, outline = true);
 		}
 		
 		else if (layer == 2) {
 			// TODO: cover as much of the bottom of the PCB as possible
+			
+			// space under PCB (so Feather and bottom components can fit)
+			translate([case_size[0]/2, case_size[1]/2, 0]) pcb_for(key_layout, col_offsets, [2.38125 + 0.5, -2, -1, 0], center = true, centerOnLayout = true, outline = true);
 		}
 		
 		else if (layer == 3) {
-			// TODO: space for PCB
+			// space for PCB
+			translate([case_size[0]/2, case_size[1]/2, 0]) pcb_for(key_layout, col_offsets, [2.38125 + 0.5, 0.5, 0.5, 0.5], center = true, centerOnLayout = true, outline = true);
 		}
 		
 		else if (layer == 4) {
@@ -106,7 +113,7 @@ module layer_3d(layer = 0, color) {
 	}
 	
 	else if (layer == 3) {
-		
+		%translate([case_size[0]/2, case_size[1]/2, layer_thicknesses[layer]-1.6/2]) pcb_for(key_layout, col_offsets, [2.38125, 0, 0, 0], thickness=1.6, center = true, centerOnLayout = true, outline = false, color="green");
 	}
 	
 	else if (layer == 4) {
@@ -118,7 +125,7 @@ module layer_3d(layer = 0, color) {
 	}
 	
 	else if (layer == 5) {
-		// TODO: high profile bezels
+		
 	}
 	
 	else {
