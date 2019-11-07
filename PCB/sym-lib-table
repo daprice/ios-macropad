@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name imacro-rescue)(type Legacy)(uri ${KIPRJMOD}/imacro-rescue.lib)(options "")(descr ""))
+  (lib (name imacro-components)(type Legacy)(uri ${KIPRJMOD}/imacro-components.lib)(options "")(descr ""))
+)

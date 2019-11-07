@@ -1,6 +1,39 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:imacro-components
 LIBS:imacro-cache
-EELAYER 30 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +48,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L imacro-rescue:SW_Push SW3:0
+L SW_Push SW3:0
 U 1 1 5A8E5932
 P 6150 2100
 F 0 "SW3:0" H 6200 2200 50  0000 L CNN
@@ -26,7 +59,7 @@ F 3 "" H 6150 2300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D D3:0
+L D D3:0
 U 1 1 5A8E5C7E
 P 6200 2425
 F 0 "D3:0" H 6200 2525 50  0000 C CNN
@@ -37,7 +70,7 @@ F 3 "" H 6200 2425 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L imacro-rescue:SW_Push SW3:1
+L SW_Push SW3:1
 U 1 1 5A8E5FA0
 P 6850 2100
 F 0 "SW3:1" H 6900 2200 50  0000 L CNN
@@ -48,7 +81,7 @@ F 3 "" H 6850 2300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D D3:1
+L D D3:1
 U 1 1 5A8E5FA6
 P 6900 2425
 F 0 "D3:1" H 6900 2525 50  0000 C CNN
@@ -59,7 +92,7 @@ F 3 "" H 6900 2425 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L imacro-rescue:SW_Push SW3:2
+L SW_Push SW3:2
 U 1 1 5A8E6053
 P 7550 2100
 F 0 "SW3:2" H 7600 2200 50  0000 L CNN
@@ -70,7 +103,7 @@ F 3 "" H 7550 2300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D D3:2
+L D D3:2
 U 1 1 5A8E6059
 P 7600 2425
 F 0 "D3:2" H 7600 2525 50  0000 C CNN
@@ -81,7 +114,7 @@ F 3 "" H 7600 2425 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L imacro-rescue:SW_Push SW2:0
+L SW_Push SW2:0
 U 1 1 5A8E6224
 P 6150 2800
 F 0 "SW2:0" H 6200 2900 50  0000 L CNN
@@ -92,7 +125,7 @@ F 3 "" H 6150 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D D2:0
+L D D2:0
 U 1 1 5A8E622A
 P 6200 3125
 F 0 "D2:0" H 6200 3225 50  0000 C CNN
@@ -103,7 +136,7 @@ F 3 "" H 6200 3125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L imacro-rescue:SW_Push SW2:1
+L SW_Push SW2:1
 U 1 1 5A8E6233
 P 6850 2800
 F 0 "SW2:1" H 6900 2900 50  0000 L CNN
@@ -114,7 +147,7 @@ F 3 "" H 6850 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D D2:1
+L D D2:1
 U 1 1 5A8E6239
 P 6900 3125
 F 0 "D2:1" H 6900 3225 50  0000 C CNN
@@ -125,7 +158,7 @@ F 3 "" H 6900 3125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L imacro-rescue:SW_Push SW2:2
+L SW_Push SW2:2
 U 1 1 5A8E6242
 P 7550 2800
 F 0 "SW2:2" H 7600 2900 50  0000 L CNN
@@ -136,7 +169,7 @@ F 3 "" H 7550 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D D2:2
+L D D2:2
 U 1 1 5A8E6248
 P 7600 3125
 F 0 "D2:2" H 7600 3225 50  0000 C CNN
@@ -147,7 +180,7 @@ F 3 "" H 7600 3125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L imacro-rescue:SW_Push SW1:0
+L SW_Push SW1:0
 U 1 1 5A8E77BD
 P 6150 3500
 F 0 "SW1:0" H 6200 3600 50  0000 L CNN
@@ -158,7 +191,7 @@ F 3 "" H 6150 3700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D D1:0
+L D D1:0
 U 1 1 5A8E77C3
 P 6200 3825
 F 0 "D1:0" H 6200 3925 50  0000 C CNN
@@ -169,7 +202,7 @@ F 3 "" H 6200 3825 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L imacro-rescue:SW_Push SW1:1
+L SW_Push SW1:1
 U 1 1 5A8E77CC
 P 6850 3500
 F 0 "SW1:1" H 6900 3600 50  0000 L CNN
@@ -180,7 +213,7 @@ F 3 "" H 6850 3700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D D1:1
+L D D1:1
 U 1 1 5A8E77D2
 P 6900 3825
 F 0 "D1:1" H 6900 3925 50  0000 C CNN
@@ -191,7 +224,7 @@ F 3 "" H 6900 3825 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L imacro-rescue:SW_Push SW1:2
+L SW_Push SW1:2
 U 1 1 5A8E77DB
 P 7550 3500
 F 0 "SW1:2" H 7600 3600 50  0000 L CNN
@@ -202,7 +235,7 @@ F 3 "" H 7550 3700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D D1:2
+L D D1:2
 U 1 1 5A8E77E1
 P 7600 3825
 F 0 "D1:2" H 7600 3925 50  0000 C CNN
@@ -213,7 +246,7 @@ F 3 "" H 7600 3825 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L imacro-rescue:SW_Push SW0:0
+L SW_Push SW0:0
 U 1 1 5A8E77EA
 P 6150 4200
 F 0 "SW0:0" H 6200 4300 50  0000 L CNN
@@ -224,7 +257,7 @@ F 3 "" H 6150 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D D0:0
+L D D0:0
 U 1 1 5A8E77F0
 P 6200 4525
 F 0 "D0:0" H 6200 4625 50  0000 C CNN
@@ -235,7 +268,7 @@ F 3 "" H 6200 4525 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L imacro-rescue:SW_Push SW0:1
+L SW_Push SW0:1
 U 1 1 5A8E77F9
 P 6850 4200
 F 0 "SW0:1" H 6900 4300 50  0000 L CNN
@@ -246,7 +279,7 @@ F 3 "" H 6850 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D D0:1
+L D D0:1
 U 1 1 5A8E77FF
 P 6900 4525
 F 0 "D0:1" H 6900 4625 50  0000 C CNN
@@ -257,7 +290,7 @@ F 3 "" H 6900 4525 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L imacro-rescue:SW_Push SW0:2
+L SW_Push SW0:2
 U 1 1 5A8E7808
 P 7550 4200
 F 0 "SW0:2" H 7600 4300 50  0000 L CNN
@@ -268,7 +301,7 @@ F 3 "" H 7550 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D D0:2
+L D D0:2
 U 1 1 5A8E780E
 P 7600 4525
 F 0 "D0:2" H 7600 4625 50  0000 C CNN
@@ -351,33 +384,33 @@ Wire Wire Line
 Wire Wire Line
 	7250 4525 7450 4525
 Wire Wire Line
-	5650 1925 5950 1925
+	5650 1925 7350 1925
 Connection ~ 6650 1925
 Connection ~ 5950 1925
 Wire Wire Line
-	5650 2625 5950 2625
+	5650 2625 7350 2625
 Connection ~ 6650 2625
 Connection ~ 5950 2625
 Wire Wire Line
-	5650 3325 5950 3325
+	5650 3325 7350 3325
 Connection ~ 6650 3325
 Connection ~ 5950 3325
 Wire Wire Line
-	5650 4025 5950 4025
+	5650 4025 7350 4025
 Connection ~ 6650 4025
 Connection ~ 5950 4025
 Wire Wire Line
-	5850 2425 5850 3125
+	5850 2425 5850 4725
 Connection ~ 5850 3125
 Connection ~ 5850 3825
 Connection ~ 5850 4525
 Wire Wire Line
-	6550 2425 6550 3125
+	6550 2425 6550 4725
 Connection ~ 6550 3125
 Connection ~ 6550 3825
 Connection ~ 6550 4525
 Wire Wire Line
-	7250 2425 7250 3125
+	7250 2425 7250 4725
 Connection ~ 7250 3125
 Connection ~ 7250 3825
 Connection ~ 7250 4525
@@ -396,7 +429,7 @@ COL1
 Text Label 7250 4725 3    60   ~ 0
 COL2
 $Comp
-L imacro-components:Feather32u4Bluefruit U1
+L Feather32u4Bluefruit U1
 U 1 1 5A8EA1BD
 P 2350 3250
 F 0 "U1" H 2825 4450 60  0000 C CNN
@@ -407,7 +440,7 @@ F 3 "" H 2575 3325 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR01
+L GND #PWR01
 U 1 1 5A8EBDBC
 P 1675 2675
 F 0 "#PWR01" H 1675 2425 50  0001 C CNN
@@ -432,7 +465,7 @@ COL1
 Text Label 1675 4325 2    60   ~ 0
 COL2
 $Comp
-L Device:Solar_Cell QI1
+L Solar_Cell QI1
 U 1 1 5A8ED49D
 P 2275 1050
 F 0 "QI1" H 2375 1150 50  0000 L CNN
@@ -443,7 +476,7 @@ F 3 "" V 2275 1110 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR02
+L GND #PWR02
 U 1 1 5A8ED77B
 P 2275 1150
 F 0 "#PWR02" H 2275 900 50  0001 C CNN
@@ -454,7 +487,7 @@ F 3 "" H 2275 1150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D_Schottky D1
+L D_Schottky D1
 U 1 1 5A8ED7C3
 P 2750 750
 F 0 "D1" H 2750 850 50  0000 C CNN
@@ -475,7 +508,7 @@ Text Label 3075 3025 0    60   ~ 0
 Wire Wire Line
 	2900 750  3075 750 
 $Comp
-L imacro-rescue:SW_SPST SW1
+L SW_SPST SW1
 U 1 1 5A8F3068
 P 3450 2525
 F 0 "SW1" H 3450 2650 50  0000 C CNN
@@ -490,7 +523,7 @@ Wire Wire Line
 Wire Wire Line
 	3450 2875 3450 2725
 $Comp
-L power:GND #PWR03
+L GND #PWR03
 U 1 1 5A8F361C
 P 3450 2325
 F 0 "#PWR03" H 3450 2075 50  0001 C CNN
@@ -500,38 +533,4 @@ F 3 "" H 3450 2325 50  0001 C CNN
 	1    3450 2325
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	6650 1925 7350 1925
-Wire Wire Line
-	5950 1925 6650 1925
-Wire Wire Line
-	6650 2625 7350 2625
-Wire Wire Line
-	5950 2625 6650 2625
-Wire Wire Line
-	6650 3325 7350 3325
-Wire Wire Line
-	5950 3325 6650 3325
-Wire Wire Line
-	6650 4025 7350 4025
-Wire Wire Line
-	5950 4025 6650 4025
-Wire Wire Line
-	5850 3125 5850 3825
-Wire Wire Line
-	5850 3825 5850 4525
-Wire Wire Line
-	5850 4525 5850 4725
-Wire Wire Line
-	6550 3125 6550 3825
-Wire Wire Line
-	6550 3825 6550 4525
-Wire Wire Line
-	6550 4525 6550 4725
-Wire Wire Line
-	7250 3125 7250 3825
-Wire Wire Line
-	7250 3825 7250 4525
-Wire Wire Line
-	7250 4525 7250 4725
 $EndSCHEMATC
