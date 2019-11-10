@@ -60,29 +60,29 @@ module layer_2d(layer = 0) {
 			// TODO: space for button, feather, battery, qi module
 			
 			// space under PCB (so Feather and bottom components can fit)
-			translate([case_size[0]/2, case_size[1]/2, 0]) pcb_for(key_layout, col_offsets, [2.38125 + 0.5, -2, -1, 0], center = true, centerOnLayout = true, outline = true);
+			translate([case_size[0]/2, case_size[1]/2, 0]) pcb_for(u, key_layout, col_offsets, [2.38125 + 0.5, -2, -1, 0], center = true, centerOnLayout = true, outline = true);
 		}
 		
 		else if (layer == 2) {
 			// TODO: cover as much of the bottom of the PCB as possible
 			
 			// space under PCB (so Feather and bottom components can fit)
-			translate([case_size[0]/2, case_size[1]/2, 0]) pcb_for(key_layout, col_offsets, [2.38125 + 0.5, -2, -1, 0], center = true, centerOnLayout = true, outline = true);
+			translate([case_size[0]/2, case_size[1]/2, 0]) pcb_for(u, key_layout, col_offsets, [2.38125 + 0.5, -2, -1, 0], center = true, centerOnLayout = true, outline = true);
 		}
 		
 		else if (layer == 3) {
 			// space for PCB
-			translate([case_size[0]/2, case_size[1]/2, 0]) pcb_for(key_layout, col_offsets, [2.38125 + 0.5, 0.5, 0.5, 0.5], center = true, centerOnLayout = true, outline = true);
+			translate([case_size[0]/2, case_size[1]/2, 0]) pcb_for(u, key_layout, col_offsets, [2.38125 + 0.5, 0.5, 0.5, 0.5], center = true, centerOnLayout = true, outline = true);
 		}
 		
 		else if (layer == 4) {
 			// switch plate
-			translate([case_size[0]/2, case_size[1]/2, 0]) layout("PG1350", key_layout, col_offsets, center = true, plateCutouts = true);
+			translate([case_size[0]/2, case_size[1]/2, 0]) layout("PG1350", u, key_layout, col_offsets, center = true, plateCutouts = true);
 		}
 		
 		else if (layer == 5) {
 			// high profile bezels
-			translate([case_size[0]/2, case_size[1]/2, 0]) layout_outline(0.5, key_layout, col_offsets, center=true);
+			translate([case_size[0]/2, case_size[1]/2, 0]) layout_outline(0.5, u, key_layout, col_offsets, center=true);
 		}
 		
 		else {
@@ -113,13 +113,13 @@ module layer_3d(layer = 0, color) {
 	}
 	
 	else if (layer == 3) {
-		%translate([case_size[0]/2, case_size[1]/2, layer_thicknesses[layer]-1.6/2]) pcb_for(key_layout, col_offsets, [2.38125, 0, 0, 0], thickness=1.6, center = true, centerOnLayout = true, outline = false, color="green");
+		%translate([case_size[0]/2, case_size[1]/2, layer_thicknesses[layer]-1.6/2]) pcb_for(u, key_layout, col_offsets, [2.38125, 0, 0, 0], thickness=1.6, center = true, centerOnLayout = true, outline = false, color="green");
 	}
 	
 	else if (layer == 4) {
 		// preview switches
 		%translate([case_size[0]/2, case_size[1]/2, layer_thicknesses[layer]])
-		layout("PG1350", key_layout, col_offsets, center = true) {
+		layout("PG1350", u, key_layout, col_offsets, center = true) {
 			switch("PG1350");
 		}
 	}
