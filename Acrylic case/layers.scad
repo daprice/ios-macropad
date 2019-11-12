@@ -15,7 +15,7 @@ $fs=0.1;
 
 // PART SIZES
 
-pcb_size = [2.25*inch, 3.28125*inch, 1.6];
+pcb_size = [54*mm, 73*mm, 1.6];
 
 screw_head_dia = 5.5;
 screw_size = M3;
