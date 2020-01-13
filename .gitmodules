@@ -1,3 +1,6 @@
 [submodule "Acrylic case/lib/keyboard_parts"]
 	path = Acrylic case/lib/keyboard_parts
 	url = https://github.com/daprice/keyboard_parts.git
+[submodule "PCB/keyswitches.pretty"]
+	path = PCB/keyswitches.pretty
+	url = https://github.com/daprice/keyswitches.pretty.git
