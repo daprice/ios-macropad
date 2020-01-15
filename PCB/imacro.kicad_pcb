@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 8)
+    (drawings 9)
     (tracks 171)
     (zones 0)
     (modules 29)
@@ -1761,7 +1761,7 @@
   (module imacro:QI_connector (layer B.Cu) (tedit 5AB1A93E) (tstamp 5A8FC2B9)
     (at 122.76 107.96 180)
     (path /5A8ED49D)
-    (fp_text reference QI1 (at 0 2) (layer B.SilkS)
+    (fp_text reference QI1 (at 1.36 1.96) (layer B.SilkS)
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_text value QI_Receiver (at 0 -2 180) (layer B.Fab)
@@ -1776,6 +1776,9 @@
       (net 18 GND))
   )
 
+  (gr_text "Designed for Adafruit Feather 32u4 Bluefruit LE" (at 110 56.4) (layer B.SilkS) (tstamp 5E1F0476)
+    (effects (font (size 0.738 0.738) (thickness 0.1845)) (justify mirror))
+  )
   (gr_line (start 83.34375 52.3875) (end 71.4375 52.3875) (angle 90) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 83.34375 52.3875) (end 126.5 52.3875) (angle 90) (layer Edge.Cuts) (width 0.15))
   (gr_text https://github.com/daprice/ios-macropad (at 84 125) (layer B.SilkS)
@@ -1784,7 +1787,7 @@
   (gr_text "designed by Dale Price" (at 104 125) (layer B.SilkS)
     (effects (font (size 0.738 0.738) (thickness 0.1845)) (justify mirror))
   )
-  (gr_text v1.0-c. (at 122 124) (layer B.SilkS)
+  (gr_text v1.0-c. (at 121.6 124.4) (layer B.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
   (gr_line (start 126.5 126) (end 71.4375 126) (angle 90) (layer Edge.Cuts) (width 0.15))
