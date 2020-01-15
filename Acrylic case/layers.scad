@@ -15,7 +15,7 @@ $fs=0.1;
 
 // PART SIZES
 
-pcb_size = [54*mm, 73*mm, 1.6];
+pcb_size = [55.1*mm, 73.6*mm, 1.6];
 
 screw_head_dia = 5.5;
 screw_size = M3;
@@ -51,7 +51,7 @@ module layer_2d(layer = 0) {
 		
 		if(layer == 0) {
 			// on/off button hole
-			translate([case_size[0]/2 - pcb_size[0]/2 + 6.56, case_size[1]/2 + (pcb_size[1]-2.38125)/2 - 68.73125, 0]) circle(d = 7, center = true);
+			translate([case_size[0]/2 - pcb_size[0]/2 + 8, case_size[1]/2 - (pcb_size[1])/2 + 11.6, 0]) circle(d = 7, center = true);
 			
 			// TODO: led holes?
 		}
