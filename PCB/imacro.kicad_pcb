@@ -1787,7 +1787,7 @@
   (gr_text "designed by Dale Price" (at 104 125) (layer B.SilkS)
     (effects (font (size 0.738 0.738) (thickness 0.1845)) (justify mirror))
   )
-  (gr_text v1.0-c. (at 121.6 124.4) (layer B.SilkS)
+  (gr_text v1.1-c. (at 121.6 124.4) (layer B.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
   (gr_line (start 126.5 126) (end 71.4375 126) (angle 90) (layer Edge.Cuts) (width 0.15))
