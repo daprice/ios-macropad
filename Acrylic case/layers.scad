@@ -82,7 +82,7 @@ module layer_2d(layer = 0) {
 		
 		else if (layer == 5) {
 			// high profile bezels
-			translate([case_size[0]/2, case_size[1]/2, 0]) layout_outline(0.5, u, key_layout, col_offsets, center=true);
+			translate([case_size[0]/2, case_size[1]/2, 0]) layout_outline(0.5, u, key_layout, col_offsets, tol=0.6, center=true);
 		}
 		
 		else {
