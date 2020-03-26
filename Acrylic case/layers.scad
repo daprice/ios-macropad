@@ -51,7 +51,24 @@ module layer_2d(layer = 0) {
 		
 		if(layer == 0) {
 			// on/off button hole
-			translate([case_size[0]/2 - pcb_size[0]/2 + 6.56, case_size[1]/2 + (pcb_size[1]-2.38125)/2 - 68.73125, 0]) circle(d = 7, center = true);
+			tab_width = 9;
+			tab_length = 30;
+			button_d = 12;
+			translate([case_size[0]/2 - pcb_size[0]/2 + 6.56, case_size[1]/2 + (pcb_size[1]-2.38125)/2 - 68.73125, 0]) {
+				difference() {
+					circle(d = button_d, center = true);
+					circle(d=button_d - 1, center = true);
+					translate([-tab_width/2, 0]) square([tab_width, tab_length]);
+				}
+				
+				translate([-tab_width/2, 0]) {
+					difference() {
+						square([tab_width, tab_length]);
+						translate([0.5, 0]) square([tab_width - 1, tab_length]);
+						translate([tab_width/2, 0]) circle(d = button_d - 1, center = true);
+					}
+				}
+			}
 			
 			// TODO: led holes?
 		}
